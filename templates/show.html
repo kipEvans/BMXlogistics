@@ -1,0 +1,49 @@
+{% extends 'starter-page.html' %}
+{% load static %}
+
+{% block content %}
+
+    <h1 class="text-center">List of quotes</h1>
+    <table class="table table-light container">
+    <tr>
+        <th>departure</th>
+        <th>Delivery</th>
+        <th>Weight</th>
+        <th>Dimensions</th>
+        <th>name</th>
+        <th>email</th>
+        <th>phone</th>
+        <th>message</th>
+        <th>Action</th>
+    </tr>
+
+    {% for quote in all %}
+
+        <tr>
+        <td>{{ quote.departure }}</td>
+        <td>{{ quote.Delivery }}</td>
+        <td>{{ quote.Weight }}</td>
+        <td>{{ quote.Dimensions }}</td>
+        <td>{{ quote.name }}</td>
+        <td>{{ quote.email }}</td>
+        <td>{{ quote.phone }}</td>
+        <td>{{ quote.message }}</td>
+
+          <td>
+            <a href=""class="btn btn-primary">Edit</a>
+            <a href=""class="btn btn-danger">Delete</a>
+
+        </td>
+        </tr>
+
+
+    {% endfor %}
+
+
+
+    </table>
+
+{% endblock %}
+
+
+

@@ -1,0 +1,65 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+{% load static %}
+
+
+<form class="form-horizontal" method="POST">
+
+    {% csrf_token %}
+
+    <fieldset>
+
+
+<!-- Form Name -->
+<legend>Register Yourself</legend>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="username">UserName</label>
+  <div class="col-md-4">
+  <input id="username" name="username" type="text" placeholder="UserName" class="form-control input-md" required="">
+
+  </div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="email">Email</label>
+  <div class="col-md-4">
+  <input id="email" name="email" type="text" placeholder="johndoe@example.com" class="form-control input-md" required="">
+
+  </div>
+</div>
+
+<!-- Password input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="password">Password</label>
+  <div class="col-md-4">
+    <input id="password" name="password" type="password" placeholder="" class="form-control input-md" required="">
+
+  </div>
+</div>
+
+
+ <!-- Confirm Password input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="confirm_password">Confirm Password</label>
+  <div class="col-md-4">
+    <input id="password" name="confirm_password" type="password" placeholder="" class="form-control input-md" required="">
+
+  </div>
+</div>
+
+<!-- Button (Double) -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="save"></label>
+  <div class="col-md-8">
+    <button id="save" name="save" class="btn btn-success">Register</button>
+    <button id="clear" name="clear" class="btn btn-danger">Reset</button>
+  </div>
+</div>
+
+</fieldset>
+</form>
